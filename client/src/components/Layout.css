@@ -19,7 +19,18 @@
 .logo {
   text-decoration: none;
   color: var(--champagne);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.logo-byline {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
 
 .logo-name {
   display: block;
