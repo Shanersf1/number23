@@ -10,8 +10,8 @@ function Layout({ children }) {
           <div className="logo-text">
             <span className="logo-name">Number 23</span>
             <span className="logo-byline">by John R Doughty</span>
+            <span className="logo-tagline">Bespoke Timepieces</span>
           </div>
-          <span className="logo-tagline">Bespoke Timepieces</span>
         </Link>
         <nav className="nav">
           <Link to="/" className="nav-link">Home</Link>
