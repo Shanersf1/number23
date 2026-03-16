@@ -20,16 +20,19 @@
   text-decoration: none;
   color: var(--champagne);
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.logo-byline {
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.8;
+.logo-text {
+  text-align: center;
 }
+
+.logo-byline {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+
 
 
 .logo-name {

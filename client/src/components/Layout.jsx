@@ -7,7 +7,10 @@ function Layout({ children }) {
     <div className="layout">
       <header className="header">
         <Link to="/" className="logo">
-          <span className="logo-name">Number23 by John R Doughty</span>
+          <div className="logo-text">
+            <span className="logo-name">Number 23</span>
+            <span className="logo-byline">by John R Doughty</span>
+          </div>
           <span className="logo-tagline">Bespoke Timepieces</span>
         </Link>
         <nav className="nav">
@@ -19,7 +22,7 @@ function Layout({ children }) {
       </header>
       <main className="main">{children}</main>
       <footer className="footer">
-        <p>© {new Date().getFullYear()} Number23 by John R Doughty. Crafted with precision.</p>
+        <p>© {new Date().getFullYear()} Number 23 by John R Doughty. Crafted with precision.</p>
         <p>Tel: 07870296819 / no23bespokewatches@gmail.com</p>
         <p>Designed and built by WebCodeCraft: info@webcodecraft.com</p>
         <nav className="footer-nav">
