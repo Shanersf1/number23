@@ -1,0 +1,137 @@
+.about-page {
+  min-height: calc(100vh - 200px);
+}
+
+.about-hero {
+  padding: 6rem 4rem 4rem;
+  text-align: center;
+  background: var(--regency-green);
+}
+
+.about-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--champagne);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.about-tagline {
+  color: var(--champagne);
+  opacity: 0.9;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.about-content {
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--regency-green);
+  margin: 2rem 0 1rem;
+}
+
+.about-text h2:first-child {
+  margin-top: 0;
+}
+
+.about-text p {
+  color: var(--black);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.highlight-box {
+  background: var(--regency-green);
+  padding: 2.5rem;
+  color: var(--champagne);
+  position: sticky;
+  top: 120px;
+}
+
+.highlight-box h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+.highlight-box ul {
+  list-style: none;
+}
+
+.highlight-box li {
+  padding: 0.6rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.highlight-box li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--champagne-dark);
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .highlight-box {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-content {
+    padding: 2rem;
+  }
+}
+
+/* Styles for embedded images */
+.about-text::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.about-image-right {
+  float: right;
+  width: 40%;
+  max-width: 300px;
+  margin: 0.5rem 0 1rem 2rem;
+}
+
+.about-image-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .about-image-right {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin: 2rem 0;
+  }
+}

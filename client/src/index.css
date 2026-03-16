@@ -1,0 +1,31 @@
+:root {
+  --regency-green: #1B4332;
+  --regency-green-light: #2D6A4F;
+  --regency-green-dark: #081C15;
+  --champagne: #F5E6D3;
+  --champagne-dark: #D4AF37;
+  --champagne-light: #FDF8F0;
+  --black: #0D0D0D;
+  --black-soft: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  color: var(--black);
+  background-color: var(--champagne-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+}

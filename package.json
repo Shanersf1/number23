@@ -1,0 +1,17 @@
+{
+  "name": "john-robert-doughty-watches",
+  "version": "1.0.0",
+  "description": "Bespoke luxury watches by John Robert Doughty",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../client && npm install",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
