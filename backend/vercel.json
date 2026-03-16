@@ -1,6 +1,12 @@
 {
+  
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "rootDirectory": "client"
+  "rootDirectory": "client",
+  
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+
+
+
 }
