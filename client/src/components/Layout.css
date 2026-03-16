@@ -27,23 +27,16 @@
   text-align: center;
 }
 
-.logo-byline {
-  display: block;
-  font-size: 0.9rem;
-  margin-top: -0.5rem;
-}
-
-
-
 .logo-name {
   display: block;
   font-family: 'Great Vibes', 'Copperplate', cursive;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
 
 .logo-tagline {
+  display: block;
   font-size: 0.7rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;

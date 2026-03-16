@@ -9,7 +9,7 @@ function Layout({ children }) {
         <Link to="/" className="logo">
           <div className="logo-text">
             <span className="logo-name">Number 23</span>
-            <span className="logo-byline">by John R Doughty</span><br></br>
+            <span className="logo-name">John R Doughty</span>
             <span className="logo-tagline">Bespoke Timepieces</span>
           </div>
         </Link>
