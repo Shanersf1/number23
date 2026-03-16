@@ -10,7 +10,7 @@ function HomePage() {
         <div className="hero-content">
           <h1>Crafted to Perfection</h1>
           <p className="hero-subtitle">
-            Truly unique, one-of-a-kind timepieces. Each watch is made to order by hand, 
+            One-of-a-kind timepieces, made to order by hand, 
             using the finest materials and components from Switzerland and Japan all to ISO:9001 Standards.
           </p>
           <Link to="/enquire" className="hero-cta">
