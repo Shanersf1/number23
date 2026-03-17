@@ -67,6 +67,9 @@ export default async function handler(req, res) {
     return res.status(200).json({ message: 'Enquiry received' });
   } catch (err) {
     console.error('Brevo send error:', err);
-    return res.status(500).json({ error: 'Failed to send email' });
+    return res.status(500).json({
+      error: 'Failed to send email',
+      details: err?.message || String(err),
+    });
   }
 }
