@@ -1,41 +1,62 @@
-import express from 'express';
-import cors from 'cors';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
-import helmet from 'helmet';
 import { connectDB } from './config/db.js';
-import enquiryRoutes from './routes/enquiries.js';
-
+// If you want to persist enquiries, import your model here, for example:
+// import Enquiry from '../backend/models/Enquiry.js';
 
 dotenv.config();
 connectDB();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-const app = express();
-const PORT = process.env.PORT || 5000;
-const isProduction = process.env.NODE_ENV === 'production';
+  try {
+    const {
+      firstName,
+      lastName,
+      email,
+      phone,
+      watchDescription,
+      requiresAdvice,
+      occasion,
+      occasionDetails,
+      eventDate,
+      recipient,
+      preferredTimeline,
+      preferredMaterials,
+      preferredStyle,
+      specialRequirements,
+    } = req.body || {};
 
-app.use(helmet());
-app.use(cors());
-app.use(express.json());
+    if (!firstName || !lastName || !email || !phone || !watchDescription || !occasion) {
+      return res.status(400).json({ error: 'Missing required fields' });
+    }
 
-app.use('/api/enquiries', enquiryRoutes);
+    // Example persistence (uncomment and adjust if using a model):
+    // const enquiry = await Enquiry.create({
+    //   firstName,
+    //   lastName,
+    //   email,
+    //   phone,
+    //   watchDescription,
+    //   requiresAdvice,
+    //   occasion,
+    //   occasionDetails,
+    //   eventDate,
+    //   recipient,
+    //   preferredTimeline,
+    //   preferredMaterials,
+    //   preferredStyle,
+    //   specialRequirements,
+    // });
 
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok' });
-});
-
-if (isProduction) {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
-  });
+    return res.status(200).json({
+      message: 'Enquiry received',
+      // enquiryId: enquiry._id, // if you persist to DB
+    });
+  } catch (err) {
+    console.error('Error handling enquiry:', err);
+    return res.status(500).json({ error: 'Internal server error' });
+  }
 }
-
-/*app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});*/
-export default app;
