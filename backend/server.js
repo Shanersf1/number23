@@ -4,7 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
-import { connectDB } from './config/db.js';
+import { connectDB } from '../api/config/db.js';
 import enquiryRoutes from './routes/enquiries.js';
 
 
