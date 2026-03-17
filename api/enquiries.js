@@ -1,10 +1,18 @@
-import Brevo from '@getbrevo/brevo';
+let apiInstance = null;
 
-const apiInstance = new Brevo.TransactionalEmailsApi();
-apiInstance.setApiKey(
-  Brevo.TransactionalEmailsApiApiKeys.apiKey,
-  process.env.BREVO_API_KEY
-);
+async function getBrevoApi() {
+  if (!apiInstance) {
+    // Dynamic import so errors happen inside handler, not at module load
+    const Brevo = await import('@getbrevo/brevo');
+
+    apiInstance = new Brevo.TransactionalEmailsApi();
+    apiInstance.setApiKey(
+      Brevo.TransactionalEmailsApiApiKeys.apiKey,
+      process.env.BREVO_API_KEY
+    );
+  }
+  return apiInstance;
+}
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -33,7 +41,9 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    await apiInstance.sendTransacEmail({
+    const api = await getBrevoApi();
+
+    await api.sendTransacEmail({
       sender: { email: process.env.EMAIL_FROM },
       to: [{ email: process.env.EMAIL_TO }],
       subject: 'New enquiry from website',
