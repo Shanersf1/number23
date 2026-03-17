@@ -1,22 +1,17 @@
 {
-  
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite",
-  "rootDirectory": "client",
-  
-  
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
+      "source": "/api/enquiries/(.*)",
+      "destination": "/api/enquiries.js"
+    },
     {
-      "src": "/api/(.*)",
-      "dest": "contact.js"
+      "source": "/api/enquiries",
+      "destination": "/api/enquiries.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/client/$1"
     }
   ]
 }

@@ -7,6 +7,7 @@ import helmet from 'helmet';
 import { connectDB } from './config/db.js';
 import enquiryRoutes from './routes/enquiries.js';
 
+
 dotenv.config();
 connectDB();
 
@@ -37,4 +38,4 @@ if (isProduction) {
 /*app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });*/
-module.exports = app;
+export default app;
