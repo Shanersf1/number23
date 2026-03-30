@@ -14,15 +14,17 @@ const ALL_IMAGES = [
   { url: '/1000044347.jpg' },
   { url: '/1000044349.jpg' },
   { url: '/1000044355.jpg' },
-  { url: '/1000044357.jpg' },
-  { url: '/1000044358.jpg' },
   { url: '/1000044373.jpg' },
   { url: '/1000044375.jpg' },
   { url: '/1000044379.jpg' },
   { url: '/1000044381.jpg' },
-  { url: '/1000044385.jpg' },
   { url: '/1000044387.jpg' },
   { url: '/1000044392.jpg' },
+  { url: '/PXL_20260327_142218375.jpg' },
+  { url: '/PXL_20260327_145125480.jpg' },
+  { url: '/PXL_20260327_145415502.jpg' },
+  { url: '/PXL_20260327_151523322.jpg' },
+  { url: '/Screenshot_20260327-201827~3.png' },
 ].map((image, index) => ({
   ...image,
   caption: QUOTES[index % QUOTES.length]
@@ -33,7 +35,6 @@ for (let i = 0; i < ALL_IMAGES.length; i += 2) {
   if (ALL_IMAGES[i + 1]) {
     imagePairs.push([ALL_IMAGES[i], ALL_IMAGES[i + 1]]);
   } else {
-    // If there's an odd one out, pair it with the first image
     imagePairs.push([ALL_IMAGES[i], ALL_IMAGES[0]]);
   }
 }
@@ -67,12 +68,11 @@ function ImageCarousel() {
       <div className="carousel-track-wrapper">
         <div
           className="carousel-track"
-        // This passes the current page number to your CSS
-                style={{
-                  '--num-pages': numPages,
-                  '--current-page': currentPage,
-                }}
-                        >
+          style={{
+            '--num-pages': numPages,
+            '--current-page': currentPage,
+          }}
+        >
           {imagePairs.map((pair, pageIndex) => (
             <div className="carousel-page" key={pageIndex}>
               <div
@@ -101,15 +101,16 @@ function ImageCarousel() {
           ))}
         </div>
       </div>
-      <button className="carousel-btn carousel-btn-prev" onClick={prevSlide} aria-label="Previous">
-        <span>‹</span>
+      <button type="button" className="carousel-btn carousel-btn-prev" onClick={prevSlide} aria-label="Previous">
+        <span aria-hidden="true">&#8249;</span>
       </button>
-      <button className="carousel-btn carousel-btn-next" onClick={nextSlide} aria-label="Next">
-        <span>›</span>
+      <button type="button" className="carousel-btn carousel-btn-next" onClick={nextSlide} aria-label="Next">
+        <span aria-hidden="true">&#8250;</span>
       </button>
       <div className="carousel-dots">
         {Array.from({ length: numPages }).map((_, index) => (
           <button
+            type="button"
             key={index}
             className={`carousel-dot ${index === currentPage ? 'active' : ''}`}
             onClick={() => goToSlide(index)}

@@ -6,11 +6,23 @@ function HomePage() {
   return (
     <div className="home-page">
       <ImageCarousel />
+      <aside className="photo-notice" aria-label="Note about gallery photographs">
+        <p>
+          Please note some of the photos in the website are for reference only. They are my own personal watches.
+        </p>
+        <p>
+          My clients&apos; pieces are in the planning stage and some are being built at present.
+        </p>
+        <p>
+          I will only display pictures of a client&apos;s watch once the customer has received the finished watch, and has given me permission to use the images.
+        </p>
+        <p className="photo-notice-closing">Thank you for your understanding.</p>
+      </aside>
       <section className="hero-intro">
         <div className="hero-content">
           <h1>Crafted to Perfection</h1>
           <p className="hero-subtitle">
-            One-of-a-kind timepieces, made to order by hand, 
+            One-of-a-kind timepieces, made to order by hand,
             using the finest materials and components from Switzerland and Japan all to ISO:9001 Standards.
           </p>
           <Link to="/enquire" className="hero-cta">
@@ -21,17 +33,17 @@ function HomePage() {
       <section className="features">
         <div className="features-grid">
           <div className="feature-card">
-            <div className="feature-icon">◇</div>
+            <div className="feature-icon" aria-hidden="true">&#8986;</div>
             <h3>One of One</h3>
             <p>Every piece is unique. No two watches are ever the same.</p>
           </div>
           <div className="feature-card">
-            <div className="feature-icon">◆</div>
+            <div className="feature-icon" aria-hidden="true">&#9670;</div>
             <h3>Finest Materials</h3>
-            <p>Sourced from the world's most prestigious suppliers.</p>
+            <p>Sourced from the world&apos;s most prestigious suppliers.</p>
           </div>
           <div className="feature-card">
-            <div className="feature-icon">●</div>
+            <div className="feature-icon" aria-hidden="true">&#9881;</div>
             <h3>Hand-Finished Movements</h3>
             <p>We can fit skeleton movements and all movements are hand-finished to the highest standard.</p>
           </div>

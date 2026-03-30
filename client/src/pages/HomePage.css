@@ -144,3 +144,30 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(27, 67, 50, 0.3);
 }
+.photo-notice {
+  max-width: min(1120px, calc(100% - 2rem));
+  margin: -0.25rem auto 0;
+  padding: 0 1.25rem 1.25rem;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--black-soft);
+  opacity: 0.82;
+  text-align: center;
+  border-bottom: 1px solid rgba(27, 67, 50, 0.12);
+}
+
+.photo-notice p {
+  margin: 0 0 0.65rem;
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.photo-notice p:last-child {
+  margin-bottom: 0;
+}
+
+.photo-notice-closing {
+  font-style: italic;
+  opacity: 0.92;
+  margin-top: 0.35rem !important;
+}
