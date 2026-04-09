@@ -28,9 +28,8 @@ function Layout({ children }) {
         <p>
           Designed and built by{' '}
           <a href="https://webcodecraft.co.uk" className="footer-link" target="_blank" rel="noopener noreferrer">
-            WebCodeCraft
+            WebCodeCraft: info@webcodecraft.com
           </a>
-          : info@webcodecraft.com
         </p>
         <nav className="footer-nav">
           <Link to="/terms-and-conditions" className="footer-link">Terms & Conditions</Link>
