@@ -15,7 +15,7 @@ function AboutPage() {
               John R Doughty is a dedicated conscientious watch builder with a huge passion, curiosity and enthusiasm for watch building and horology. With years of experience and a history steeped in time, design and attention to detail, he is dedicated to creating truly unique, one-of-a-kind timepieces for discerning collectors. Each creation is a testament to precision, artistry, and uncompromising quality.
             </p>
             <figure className="about-image-right">
-              <img src="/watch 001.jpg" alt="A bespoke watch from No23" />
+              <img src="/newwatch.jpg" alt="A bespoke watch from No23" />
             </figure>
             <p>
               Every watch is made to order by hand, ensuring that no two pieces are ever identical. From the initial consultation through to final assembly, each commission receives the same meticulous attention to detail.
