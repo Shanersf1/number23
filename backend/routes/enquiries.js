@@ -1,11 +1,28 @@
 import express from 'express';
+import rateLimit from 'express-rate-limit';
 import Enquiry from '../models/Enquiry.js';
 import * as Brevo from '@getbrevo/brevo';
 import xss from 'xss';
 
 const router = express.Router();
 
-router.post('/', async (req, res) => {
+const enquiryPostLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  max: Number.parseInt(process.env.ENQUIRY_POST_RATE_LIMIT_MAX ?? '10', 10),
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Too many enquiry submissions. Please try again later.' },
+});
+
+const enquiryGetLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: Number.parseInt(process.env.ENQUIRY_GET_RATE_LIMIT_MAX ?? '60', 10),
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Too many requests.' },
+});
+
+router.post('/', enquiryPostLimiter, async (req, res) => {
   try {
     const enquiry = new Enquiry(req.body);
     await enquiry.save();
@@ -52,7 +69,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
+router.get('/', enquiryGetLimiter, async (req, res) => {
   try {
     const enquiries = await Enquiry.find().sort({ createdAt: -1 });
     res.json(enquiries);
