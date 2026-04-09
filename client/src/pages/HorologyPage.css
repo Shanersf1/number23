@@ -1,0 +1,86 @@
+.horology-page {
+  min-height: calc(100vh - 200px);
+}
+
+.horology-hero {
+  padding: 6rem 4rem 4rem;
+  text-align: center;
+  background: var(--regency-green);
+}
+
+.horology-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--champagne);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.horology-tagline {
+  color: var(--champagne);
+  opacity: 0.9;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.horology-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.horology-content > p {
+  color: var(--black-soft);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.horology-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.65rem, 3vw, 2rem);
+  font-weight: 500;
+  color: var(--regency-green);
+  margin: 2.5rem 0 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.horology-lead {
+  margin-bottom: 1.75rem !important;
+}
+
+.horology-feature-block {
+  background: var(--champagne);
+  border-left: 4px solid var(--regency-green);
+  padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 4px 24px rgba(27, 67, 50, 0.08);
+}
+
+.horology-feature-block h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--regency-green);
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.horology-feature-block p {
+  color: var(--black-soft);
+  font-size: 1.02rem;
+  line-height: 1.85;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .horology-hero {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .horology-content {
+    padding: 2.5rem 1.25rem 3.5rem;
+  }
+}

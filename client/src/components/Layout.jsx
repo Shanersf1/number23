@@ -16,13 +16,14 @@ function Layout({ children }) {
         <nav className="nav">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/about" className="nav-link">About</Link>
+          <Link to="/horology" className="nav-link">Horology</Link>
           <Link to="/services" className="nav-link">Services</Link>
           <Link to="/enquire" className="nav-link nav-link-cta">Make an Enquiry</Link>
         </nav>
       </header>
       <main className="main">{children}</main>
       <footer className="footer">
-        <p>© {new Date().getFullYear()} Number 23 by John R Doughty. Crafted with precision.</p>
+        <p>&#169; {new Date().getFullYear()} Number 23 by John R Doughty. Crafted with precision.</p>
         <p>Tel: 07870296819 / no23bespokewatches@gmail.com</p>
         <p>Designed and built by WebCodeCraft: info@webcodecraft.com</p>
         <nav className="footer-nav">
