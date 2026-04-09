@@ -25,7 +25,13 @@ function Layout({ children }) {
       <footer className="footer">
         <p>&#169; {new Date().getFullYear()} Number 23 by John R Doughty. Crafted with precision.</p>
         <p>Tel: 07870296819 / no23bespokewatches@gmail.com</p>
-        <p>Designed and built by WebCodeCraft: info@webcodecraft.com</p>
+        <p>
+          Designed and built by{' '}
+          <a href="https://webcodecraft.co.uk" className="footer-link" target="_blank" rel="noopener noreferrer">
+            WebCodeCraft
+          </a>
+          : info@webcodecraft.com
+        </p>
         <nav className="footer-nav">
           <Link to="/terms-and-conditions" className="footer-link">Terms & Conditions</Link>
           &nbsp;|&nbsp;
