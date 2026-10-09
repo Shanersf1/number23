@@ -20,6 +20,14 @@ function WeddingsPage() {
         <p>
           These frames are created with the exact moment you become Husband and Wife in mind. The layout is designed to capture that exact minute in time and the watches are both stopped then, a time you can look back on for years to come, a truly significant, special time frozen for ever.
         </p>
+        <figure className="weddings-figure">
+          <img
+            src="/18229.jpg"
+            width="1400"
+            height="1859"
+            alt="Framed wedding display on a stand, with a gold pocket watch, a ladies wristwatch, pink flowers, and gold lettering marking the moment the couple became Husband and Wife."
+          />
+        </figure>
         <section className="weddings-block" aria-labelledby="frame-heading">
           <h2 id="frame-heading">The frame</h2>
           <p>
@@ -31,6 +39,16 @@ function WeddingsPage() {
           <p>
             The bride and groom&apos;s names, wedding date and a personal message is printed on the inside of the glass.
           </p>
+          <figure className="weddings-figure weddings-figure-inset">
+            <img
+              src="/18232.jpg"
+              width="1400"
+              height="1859"
+              alt="Close view of gold lettering on the inside of the frame glass, with the couple's names, wedding date, and the words Became Husband and Wife."
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </section>
         <section className="weddings-block" aria-labelledby="watches-heading">
           <h2 id="watches-heading">The watches</h2>
@@ -40,6 +58,28 @@ function WeddingsPage() {
           <p>
             The ladies watch is a replica of the very first ladies watch made to be worn on the wrist. This was commissioned on 8th of June 1810, Watch No2639 with A L Breguet for Caroline Murat, The Queen of Naples. She was the sister of Napoleon Bonaparte. Very elegant and fit for a Queen.
           </p>
+          <div className="weddings-photo-pair">
+            <figure className="weddings-figure weddings-figure-inset">
+              <img
+                src="/18230.jpg"
+                width="1400"
+                height="1859"
+                alt="Gold plated pocket watch with an open engraved cover, Roman numerals, and a chain, set beside pink flowers."
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure className="weddings-figure weddings-figure-inset">
+              <img
+                src="/18231.jpg"
+                width="1400"
+                height="1859"
+                alt="Oval ladies wristwatch with a white strap, set on patterned fabric with miniature pink flowers."
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
         </section>
         <section className="weddings-block" aria-labelledby="display-heading">
           <h2 id="display-heading">Display and finish</h2>

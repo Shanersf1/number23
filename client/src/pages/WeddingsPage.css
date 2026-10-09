@@ -103,6 +103,40 @@
   color: var(--regency-green-light);
 }
 
+
+.weddings-figure {
+  margin: 0 0 1.75rem;
+}
+
+.weddings-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(27, 67, 50, 0.12);
+}
+
+.weddings-figure-inset {
+  margin: 0.35rem 0 1.15rem;
+}
+
+.weddings-photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.weddings-photo-pair .weddings-figure {
+  margin: 0 0 1.15rem;
+}
+
+@media (max-width: 600px) {
+  .weddings-photo-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .weddings-hero {
     padding: 4rem 1.5rem 3rem;
