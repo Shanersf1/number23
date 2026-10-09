@@ -1,0 +1,118 @@
+.weddings-page {
+  min-height: calc(100vh - 200px);
+}
+
+.weddings-hero {
+  padding: 6rem 4rem 4rem;
+  text-align: center;
+  background: var(--regency-green);
+}
+
+.weddings-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--champagne);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.weddings-tagline {
+  color: var(--champagne);
+  opacity: 0.9;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.weddings-content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.weddings-content > p,
+.weddings-block p,
+.weddings-enquire p {
+  color: var(--black-soft);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.weddings-block {
+  background: var(--champagne);
+  border-left: 4px solid var(--regency-green);
+  padding: 1.5rem 1.5rem 0.5rem 1.75rem;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 4px 24px rgba(27, 67, 50, 0.08);
+  margin: 0 0 1.75rem;
+}
+
+.weddings-block h2,
+.weddings-enquire h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--regency-green);
+  margin: 0 0 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.weddings-closing {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--black-soft);
+  margin: 0.5rem 0 2rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(27, 67, 50, 0.12);
+}
+
+.weddings-price {
+  background: var(--regency-green);
+  color: var(--champagne);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.weddings-price-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.weddings-price-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.weddings-email {
+  color: var(--regency-green);
+  font-weight: 500;
+}
+
+.weddings-email:hover {
+  color: var(--regency-green-light);
+}
+
+@media (max-width: 600px) {
+  .weddings-hero {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .weddings-tagline {
+    letter-spacing: 0.08em;
+  }
+
+  .weddings-content {
+    padding: 2.5rem 1.25rem 3.5rem;
+  }
+}

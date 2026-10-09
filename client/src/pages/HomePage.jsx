@@ -55,6 +55,7 @@ function HomePage() {
           <div className="offering-card">
             <h3>Wedding Watches</h3>
             <p>Celebrate your most beautiful day with a bespoke timepiece.</p>
+            <Link to="/weddings" className="offering-link">Framed wedding watches</Link>
           </div>
           <div className="offering-card">
             <h3>Special Birthdays</h3>

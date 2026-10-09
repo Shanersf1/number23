@@ -18,6 +18,7 @@ function Layout({ children }) {
           <Link to="/about" className="nav-link">About</Link>
           <Link to="/horology" className="nav-link">Horology</Link>
           <Link to="/services" className="nav-link">Services</Link>
+          <Link to="/weddings" className="nav-link">Weddings</Link>
           <Link to="/enquire" className="nav-link nav-link-cta">Make an Enquiry</Link>
         </nav>
       </header>

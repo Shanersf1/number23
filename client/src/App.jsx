@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage';
 import HorologyPage from './pages/HorologyPage';
 import EnquiryPage from './pages/EnquiryPage';
 import ServicesPage from './pages/ServicesPage';
+import WeddingsPage from './pages/WeddingsPage';
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/horology" element={<HorologyPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/weddings" element={<WeddingsPage />} />
           <Route path="/enquire" element={<EnquiryPage />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

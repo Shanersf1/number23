@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ServicesPage.css';
 
 const ServicesPage = () => {
@@ -9,6 +10,9 @@ const ServicesPage = () => {
         <h2>Wedding Watches</h2>
         <p>
           We specialise in creating exquisite wedding watches to celebrate your most beautiful day. A unique timepiece to mark the beginning of a lifelong journey together.
+        </p>
+        <p>
+          <Link to="/weddings" className="service-page-link">View framed wedding watches</Link>
         </p>
       </section>
       <section className="service-section">
